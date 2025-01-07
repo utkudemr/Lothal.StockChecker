@@ -1,0 +1,1 @@
+-> redis port locahost:6379 and run 
