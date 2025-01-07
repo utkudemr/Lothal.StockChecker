@@ -1,0 +1,6 @@
+@Lothal.StockChecker_HostAddress = http://localhost:5241
+
+GET {{Lothal.StockChecker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

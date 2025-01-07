@@ -1,0 +1,19 @@
+@localUrl = https://localhost:7069
+
+### Ürün ekleme (POST)
+POST {{localUrl}}/api/stock
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "id": 1,
+  "name": "Product A",
+  "stock": 100
+}
+
+###
+
+### Ürün sorgulama (GET)
+GET {{localUrl}}/api/products/123456789
+
+###
