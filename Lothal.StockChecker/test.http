@@ -1,19 +1,29 @@
-@localUrl = https://localhost:7069
+### Base URL
+@baseUrl = https://localhost:7069
 
-### Ürün ekleme (POST)
-POST {{localUrl}}/api/stock
+### Create Product
+POST {{baseUrl}}/api/Product
 Content-Type: application/json
 
 {
-  "barcode": "123456789",
-  "id": 1,
-  "name": "Product A",
-  "stock": 100
+  "Barcode": "123456789",
+  "Name": "Sample Product",
+  "Description": "A sample product for testing",
+  "Price": 10.99,
+  "Stock": 100
 }
 
-###
+### Get Product by Barcode
+GET {{baseUrl}}/api/Product/123456789
 
-### Ürün sorgulama (GET)
-GET {{localUrl}}/api/products/123456789
+### Get Stock by Barcode
+GET {{baseUrl}}/api/Stock/stock/123456789
 
-###
+### Decrease Stock
+POST {{baseUrl}}/api/Stock/decrease
+Content-Type: application/json
+
+{
+  "Barcode": "123456789",
+  "Quantity": 10
+}
