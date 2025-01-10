@@ -27,3 +27,15 @@ Content-Type: application/json
   "Barcode": "123456789",
   "Quantity": 10
 }
+
+
+### Decrease Lua Stock
+POST {{baseUrl}}/api/Stock/decrease-lua
+Content-Type: application/json
+
+{
+  "Barcode": "123456789",
+  "Quantity": 10
+}
+
+

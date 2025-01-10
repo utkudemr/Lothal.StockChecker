@@ -1,0 +1,111 @@
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 15
+}
+
+###
+
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 5
+}
+
+###
+
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 25
+}
+
+###
+
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 5
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 5
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 5
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 5
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 15
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 5
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 15
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 15
+}
+
+###
+POST https://localhost:7069/api/stock/decrease-lua
+Content-Type: application/json
+
+{
+  "barcode": "123456789",
+  "quantity": 15
+}
+
+###
