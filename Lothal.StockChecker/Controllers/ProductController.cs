@@ -8,7 +8,7 @@ namespace Lothal.StockChecker.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ProductController(IConnectionMultiplexer redis) : ControllerBase
+public class ProductController(IConnectionMultiplexer redis, ILogger<ProductController> logger) : ControllerBase
 {
     private readonly IDatabase _redisDb = redis.GetDatabase();
 
@@ -24,18 +24,14 @@ public class ProductController(IConnectionMultiplexer redis) : ControllerBase
 
         if (isSuccess)
         {
-            var stock = new Stock()
-            {
-                ProductId = product.Id,
-                Quantity = productRequest.Stock
-            };
             var stockKey = string.Format(CustomConstants.StockKey, product.Barcode);
-            var stockJson = JsonSerializer.Serialize(stock);
+            var stockJson = JsonSerializer.Serialize(productRequest.Stock);
             await _redisDb.StringSetAsync(stockKey, stockJson);
-            return Ok(new { Message = "Product added successfully." });
+            logger.LogInformation("Created product with Barcode: {product.Barcode}",product.Barcode);
+            return Ok(new { Message = $"Product added successfully.{productRequest.Id}" });
         }
-
-        return BadRequest(new { Message = "Failed to add product." });
+        logger.LogInformation("Failed to add product. {product.Barcode}",product.Barcode);
+        return BadRequest(new { Message = $"Failed to add product.{product.Barcode}" });
     }
 
     [HttpGet("{barcode}")]
